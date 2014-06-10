@@ -1,0 +1,128 @@
+Name         : kde5-kwin
+Version      : 4.97.0
+Release      : 1
+Group        : System/Base
+License      : GPLv2+
+Summary      : KDE Window manager
+Description  : |
+  KDE Window manager
+URL          : http://www.kde.org
+SetupOptions : -q -n %{name}-%{version}/upstream
+
+Sources:
+    - "%{name}-%{version}.tar.xz"
+
+RpmLintIgnore:
+    - devel-file-in-non-devel-package
+    - no-changelogname-tag
+    - library-without-ldconfig-postin
+    - library-without-ldconfig-postun
+
+Configure    : none
+Builder      : none
+
+PkgBR:
+    - kde5-rpm-macros
+    - extra-cmake-modules
+    - qt5-tools
+    - kf5-kconfig-devel
+    - kf5-kconfigwidgets-devel
+    - kf5-kcoreaddons-devel
+    - kf5-kcrash-devel
+    - kf5-kglobalaccel-devel
+    - kf5-ki18n-devel
+    - kf5-kinit-devel
+    - kf5-knotifications-devel
+    - kf5-kservice-devel
+    - kf5-plasma-devel
+    - kf5-kwidgetsaddons-devel
+    - kf5-kwindowsystem-devel
+    - kf5-kdoctools-devel
+    - kf5-kcmutils-devel
+    - kf5-knewstuff-devel
+    - kf5-kactivities-libs-devel
+    - kf5-kdoctools-devel
+    - mesa-libGL-devel
+    - mesa-libEGL-devel
+    - libxkbcommon-devel
+    - libX11-devel
+    - libxcb-devel
+    - libICE-devel
+    - libSM-devel
+    - libXcursor-devel
+    - xcb-util-wm-devel
+    - xcb-util-image-devel
+    - xcb-util-keysyms-devel
+PkgConfigBR:
+    - Qt5Core
+    - Qt5DBus
+    - Qt5Xml
+    - Qt5Network
+    - Qt5Gui
+    - Qt5Widgets
+    - Qt5Concurrent
+    - Qt5Test
+    - Qt5Script
+    - Qt5X11Extras
+Requires:
+    - kde5-filesystem
+
+RequiresPost:
+    - /sbin/ldconfig
+RequiresPostUn:
+    - /sbin/ldconfig
+
+Files:
+    - "%doc COMPLIANCE COPYING COPYING.DOC HACKING README"
+    - "%{_kde5_bindir}/kwin"
+    - "%{_kde5_datadir}/kwin"
+    - "%{_kde5_libdir}/libkdeinit5_kwin.so"
+    - "%{_kde5_libdir}/libkdeinit5_kwin_rules_dialog.so"
+    - "%{_kde5_libdir}/libkdecorations.so.*"
+    - "%{_kde5_libdir}/libkwinxrenderutils.so.*"
+    - "%{_kde5_libdir}/libkwineffects.so.*"
+    - "%{_kde5_libdir}/libkwinglutils.so.*"
+    - "%{_kde5_libdir}/libkwin4_effect_builtins.so.*"
+    - "%{_kde5_libdir}/plugins/*.so"
+    - "%{_kde5_libdir}/plugins/kwin"
+    - "%{_kde5_libdir}/qml/org/kde/kwin"
+    - "%{_kde5_libdir}/kconf_update_bin/kwin5_update_default_rules"
+    - "%{_kde5_libexecdir}/kwin_killer_helper"
+    - "%{_kde5_libexecdir}/kwin_rules_dialog"
+    - "%{_kde5_datadir}/kwincompositing"
+    - "%{_datadir}/kservices5/*.desktop"
+    - "%{_datadir}/kservices5/kwin"
+    - "%{_datadir}/kservicetypes5/*.desktop"
+    - "%{_datadir}/knotifications5/kwin.notifyrc"
+    - "%{_datadir}/config.kcfg/kwin.kcfg"
+    - "%{_datadir}/icons/oxygen/*/actions/*"
+    - "%{_kde5_sysconfdir}/xdg/*.knsrc"
+
+SubPackages:
+    - Name: devel
+      Group: Development/Libraries
+      Summary: Development files for %{name}
+      Description: |
+        The %{name}-devel package contains the files necessary to develop applications
+        that use %{name}.
+      Requires:
+          - "kf5-kconfig-devel"
+          - "kf5-kwidgetsaddons-devel"
+      Files:
+          - "%{_libdir}/cmake/KWinDBusInterface"
+          - "%{_libdir}/cmake/KDecorations"
+          - "%{_datadir}/dbus-1/interfaces/*.xml"
+          - "%{_kde5_libdir}/libkdecorations.so"
+          - "%{_kde5_libdir}/libkwinxrenderutils.so"
+          - "%{_kde5_libdir}/libkwineffects.so"
+          - "%{_kde5_libdir}/libkwinglutils.so"
+          - "%{_kde5_libdir}/libkwin4_effect_builtins.so"
+          - "%{_kde5_includedir}/*.h"
+    - Name: doc
+      Group: Documentation
+      Summary: User manual for %{name} %{name}
+      Description: |
+         User manual for %{name}.
+      Files:
+          - "%doc COMPLIANCE COPYING COPYING.DOC HACKING README"
+          - "%{_datadir}/doc/HTML/en/kcontrol/*"
