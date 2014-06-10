@@ -95,9 +95,6 @@ User manual for %{name}.
 # icccm-optional.diff
 %patch0 -p1
 # >> setup
-rm -vf /usr/include/xcb/xcb_icccm.h
-rm -vf /usr/lib/libxcb-icccm*
-rm -vf /usr/lib/pkgconfig/xcb-icccm.pc
 # << setup
 
 %build
