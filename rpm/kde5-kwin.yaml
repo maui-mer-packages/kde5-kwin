@@ -84,6 +84,7 @@ Files:
     - "%{_kde5_libdir}/libkdecorations.so.*"
     - "%{_kde5_libdir}/libkwinxrenderutils.so.*"
     - "%{_kde5_libdir}/libkwineffects.so.*"
+    - "%{_kde5_libdir}/libkwinglesutils.so.*"
     - "%{_kde5_libdir}/libkwin4_effect_builtins.so.*"
     - "%{_kde5_libdir}/plugins/*.so"
     - "%{_kde5_libdir}/plugins/kwin"
@@ -117,6 +118,7 @@ SubPackages:
           - "%{_kde5_libdir}/libkdecorations.so"
           - "%{_kde5_libdir}/libkwinxrenderutils.so"
           - "%{_kde5_libdir}/libkwineffects.so"
+          - "%{_kde5_libdir}/libkwinglesutils.so"
           - "%{_kde5_libdir}/libkwin4_effect_builtins.so"
           - "%{_kde5_includedir}/*.h"
     - Name: doc
