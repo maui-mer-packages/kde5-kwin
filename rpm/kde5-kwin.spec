@@ -48,17 +48,15 @@ BuildRequires:  kf5-kcmutils-devel
 BuildRequires:  kf5-knewstuff-devel
 BuildRequires:  kf5-kactivities-libs-devel
 BuildRequires:  kf5-kdoctools-devel
-BuildRequires:  mesa-libGL-devel
-BuildRequires:  mesa-libEGL-devel
+BuildRequires:  libGL-devel
+BuildRequires:  libEGL-devel
 BuildRequires:  libxkbcommon-devel
 BuildRequires:  libX11-devel
 BuildRequires:  libxcb-devel
 BuildRequires:  libICE-devel
 BuildRequires:  libSM-devel
 BuildRequires:  libXcursor-devel
-BuildRequires:  xcb-util-wm-devel
-BuildRequires:  xcb-util-image-devel
-BuildRequires:  xcb-util-keysyms-devel
+BuildRequires:  xcb-util-devel
 
 
 %description

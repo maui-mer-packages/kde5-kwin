@@ -42,17 +42,15 @@ PkgBR:
     - kf5-knewstuff-devel
     - kf5-kactivities-libs-devel
     - kf5-kdoctools-devel
-    - mesa-libGL-devel
-    - mesa-libEGL-devel
+    - libGL-devel
+    - libEGL-devel
     - libxkbcommon-devel
     - libX11-devel
     - libxcb-devel
     - libICE-devel
     - libSM-devel
     - libXcursor-devel
-    - xcb-util-wm-devel
-    - xcb-util-image-devel
-    - xcb-util-keysyms-devel
+    - xcb-util-devel
 PkgConfigBR:
     - Qt5Core
     - Qt5DBus
