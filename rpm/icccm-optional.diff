@@ -46,4 +46,32 @@ index 60d3c66..5351236 100644
  add_feature_info("XCB-ICCCM" XCB_ICCCM_FOUND "Required for building test applications for KWin")
  
  feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
-
+diff --git a/config-kwin.h.cmake b/config-kwin.h.cmake
+index d9bf15e..67aba7b 100644
+--- a/config-kwin.h.cmake
++++ b/config-kwin.h.cmake
+@@ -17,3 +17,10 @@
+ 
+ /* Define to 1 if you have the <malloc.h> header file. */
+ #cmakedefine HAVE_MALLOC_H 1
++
++#cmakedefine XCB_ICCCM_FOUND 1
++#ifndef XCB_ICCCM_FOUND
++#define XCB_ICCCM_WM_STATE_WITHDRAWN 0
++#define XCB_ICCCM_WM_STATE_NORMAL 1
++#define XCB_ICCCM_WM_STATE_ICONIC 3
++#endif
+diff --git a/events.cpp b/events.cpp
+index cb2aeac..d84e09d 100644
+--- a/events.cpp
++++ b/events.cpp
+@@ -54,7 +54,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ #include <kkeyserver.h>
+ 
+ #include <xcb/sync.h>
++#ifdef XCB_ICCCM_FOUND
+ #include <xcb/xcb_icccm.h>
++#endif
+ 
+ #include "composite.h"
+ #include "killwindow.h"
