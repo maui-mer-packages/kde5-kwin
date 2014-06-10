@@ -12,6 +12,9 @@ SetupOptions : -q -n %{name}-%{version}/upstream
 Sources:
     - "%{name}-%{version}.tar.xz"
 
+Patches:
+    - "icccm-optional.diff"
+
 RpmLintIgnore:
     - devel-file-in-non-devel-package
     - no-changelogname-tag
