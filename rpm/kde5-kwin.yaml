@@ -63,6 +63,7 @@ PkgConfigBR:
     - Qt5Script
     - Qt5X11Extras
     - Qt5Quick
+    - Qt5UiTools
 Requires:
     - kde5-filesystem
 
