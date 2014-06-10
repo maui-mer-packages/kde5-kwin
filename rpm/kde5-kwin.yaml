@@ -62,6 +62,7 @@ PkgConfigBR:
     - Qt5Test
     - Qt5Script
     - Qt5X11Extras
+    - Qt5Quick
 Requires:
     - kde5-filesystem
 
