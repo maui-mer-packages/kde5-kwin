@@ -136,7 +136,6 @@ rm -rf %{buildroot}
 %{_kde5_libdir}/libkdecorations.so.*
 %{_kde5_libdir}/libkwinxrenderutils.so.*
 %{_kde5_libdir}/libkwineffects.so.*
-%{_kde5_libdir}/libkwinglutils.so.*
 %{_kde5_libdir}/libkwin4_effect_builtins.so.*
 %{_kde5_libdir}/plugins/*.so
 %{_kde5_libdir}/plugins/kwin
@@ -150,7 +149,7 @@ rm -rf %{buildroot}
 %{_datadir}/kservicetypes5/*.desktop
 %{_datadir}/knotifications5/kwin.notifyrc
 %{_datadir}/config.kcfg/kwin.kcfg
-%{_datadir}/icons/oxygen/*/actions/*
+%{_datadir}/icons/oxygen/*
 %{_kde5_sysconfdir}/xdg/*.knsrc
 # >> files
 # << files
@@ -164,7 +163,6 @@ rm -rf %{buildroot}
 %{_kde5_libdir}/libkdecorations.so
 %{_kde5_libdir}/libkwinxrenderutils.so
 %{_kde5_libdir}/libkwineffects.so
-%{_kde5_libdir}/libkwinglutils.so
 %{_kde5_libdir}/libkwin4_effect_builtins.so
 %{_kde5_includedir}/*.h
 # >> files devel
