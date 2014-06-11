@@ -15,7 +15,6 @@ URL:        http://www.kde.org
 Source0:    %{name}-%{version}.tar.xz
 Source100:  kde5-kwin.yaml
 Source101:  kde5-kwin-rpmlintrc
-Patch0:     icccm-optional.diff
 Requires:   kde5-filesystem
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
@@ -92,8 +91,6 @@ User manual for %{name}.
 %prep
 %setup -q -n %{name}-%{version}/upstream
 
-# icccm-optional.diff
-%patch0 -p1
 # >> setup
 # << setup
 
