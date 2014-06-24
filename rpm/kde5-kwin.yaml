@@ -74,7 +74,7 @@ RequiresPostUn:
 
 Files:
     - "%doc COMPLIANCE COPYING COPYING.DOC HACKING README"
-    - "%{_kde5_bindir}/kwin"
+    - "%{_kde5_bindir}/kwin_x11"
     - "%{_kde5_datadir}/kwin"
     - "%{_kde5_libdir}/libkdeinit5_kwin.so"
     - "%{_kde5_libdir}/libkdeinit5_kwin_rules_dialog.so"
