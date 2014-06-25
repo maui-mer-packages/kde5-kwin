@@ -122,7 +122,12 @@ rm -rf %{buildroot}
 %{_kde5_libdir}/libkdecorations.so.*
 %{_kde5_libdir}/libkwinxrenderutils.so.*
 %{_kde5_libdir}/libkwineffects.so.*
+%ifarch %{arm}
 %{_kde5_libdir}/libkwinglesutils.so.*
+%endif
+%ifarch %{ix86} x86_64
+%{_kde5_libdir}/libkwinglutils.so.*
+%endif
 %{_kde5_libdir}/libkwin4_effect_builtins.so.*
 %{_kde5_libdir}/plugins/*.so
 %{_kde5_libdir}/plugins/kwin
@@ -149,7 +154,12 @@ rm -rf %{buildroot}
 %{_kde5_libdir}/libkdecorations.so
 %{_kde5_libdir}/libkwinxrenderutils.so
 %{_kde5_libdir}/libkwineffects.so
+%ifarch %{arm}
 %{_kde5_libdir}/libkwinglesutils.so
+%endif
+%ifarch %{ix86} x86_64
+%{_kde5_libdir}/libkwinglutils.so
+%endif
 %{_kde5_libdir}/libkwin4_effect_builtins.so
 %{_kde5_includedir}/*.h
 # >> files devel
