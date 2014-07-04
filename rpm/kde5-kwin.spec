@@ -141,6 +141,7 @@ rm -rf %{buildroot}
 %{_datadir}/kservicetypes5/*.desktop
 %{_datadir}/knotifications5/kwin.notifyrc
 %{_datadir}/config.kcfg/kwin.kcfg
+%{_datadir}/icons/hicolor/*
 %{_kde5_sysconfdir}/xdg/*.knsrc
 # >> files
 # << files
