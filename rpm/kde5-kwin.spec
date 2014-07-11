@@ -32,6 +32,13 @@ BuildRequires:  pkgconfig(Qt5Script)
 BuildRequires:  pkgconfig(Qt5X11Extras)
 BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  pkgconfig(Qt5UiTools)
+BuildRequires:  pkgconfig(x11)
+BuildRequires:  pkgconfig(xcursor)
+BuildRequires:  pkgconfig(sm)
+BuildRequires:  pkgconfig(ice)
+BuildRequires:  pkgconfig(xcb-keysyms)
+BuildRequires:  pkgconfig(xcb-image)
+BuildRequires:  pkgconfig(xkbcommon)
 BuildRequires:  kde5-rpm-macros
 BuildRequires:  extra-cmake-modules
 BuildRequires:  qt5-tools
@@ -54,13 +61,6 @@ BuildRequires:  kf5-kactivities-libs-devel
 BuildRequires:  kf5-kdoctools-devel
 BuildRequires:  libGL-devel
 BuildRequires:  libEGL-devel
-BuildRequires:  libxkbcommon-devel
-BuildRequires:  libX11-devel
-BuildRequires:  libxcb-devel
-BuildRequires:  libICE-devel
-BuildRequires:  libSM-devel
-BuildRequires:  libXcursor-devel
-BuildRequires:  xcb-util-devel
 
 %description
 KDE Window manager

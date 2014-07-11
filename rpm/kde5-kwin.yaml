@@ -44,13 +44,6 @@ PkgBR:
     - kf5-kdoctools-devel
     - libGL-devel
     - libEGL-devel
-    - libxkbcommon-devel
-    - libX11-devel
-    - libxcb-devel
-    - libICE-devel
-    - libSM-devel
-    - libXcursor-devel
-    - xcb-util-devel
 PkgConfigBR:
     - Qt5Core
     - Qt5DBus
@@ -64,6 +57,13 @@ PkgConfigBR:
     - Qt5X11Extras
     - Qt5Quick
     - Qt5UiTools
+    - x11
+    - xcursor
+    - sm
+    - ice
+    - xcb-keysyms
+    - xcb-image
+    - xkbcommon
 Requires:
     - kde5-filesystem
 
