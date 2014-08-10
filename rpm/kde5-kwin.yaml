@@ -57,6 +57,7 @@ PkgConfigBR:
     - Qt5X11Extras
     - Qt5Quick
     - Qt5UiTools
+    - Qt5Multimedia
     - x11
     - xcursor
     - sm
