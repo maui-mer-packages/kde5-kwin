@@ -9,7 +9,7 @@ Name:       kde5-kwin
 # << macros
 
 Summary:    KDE Window manager
-Version:    4.97.0
+Version:    5.0.0
 Release:    1
 Group:      System/Base
 License:    GPLv2+
