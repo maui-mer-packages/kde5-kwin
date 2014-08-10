@@ -39,6 +39,7 @@ BuildRequires:  pkgconfig(ice)
 BuildRequires:  pkgconfig(xcb-keysyms)
 BuildRequires:  pkgconfig(xcb-image)
 BuildRequires:  pkgconfig(xkbcommon)
+BuildRequires:  pkgconfig(epoxy)
 BuildRequires:  kde5-rpm-macros
 BuildRequires:  extra-cmake-modules
 BuildRequires:  qt5-tools

@@ -64,6 +64,7 @@ PkgConfigBR:
     - xcb-keysyms
     - xcb-image
     - xkbcommon
+    - epoxy
 Requires:
     - kde5-filesystem
 
