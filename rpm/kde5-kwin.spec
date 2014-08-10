@@ -131,9 +131,9 @@ rm -rf %{buildroot}
 %{_kde5_libdir}/libkwinglutils.so.*
 %endif
 %{_kde5_libdir}/libkwin4_effect_builtins.so.*
-%{_kde5_libdir}/plugins/*.so
-%{_kde5_libdir}/plugins/kwin
-%{_kde5_libdir}/qml/org/kde/kwin
+%{_kde5_plugindir}/*.so
+%{_kde5_plugindir}/kwin
+%{_kf5_qmldir}/org/kde/kwin
 %{_kde5_libdir}/kconf_update_bin/kwin5_update_default_rules
 %{_kde5_libexecdir}/kwin_killer_helper
 %{_kde5_libexecdir}/kwin_rules_dialog
