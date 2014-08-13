@@ -1,0 +1,138 @@
+Name         : kwin
+Version      : 5.0.0
+Release      : 1
+Group        : System/Base
+License      : GPLv2+
+Summary      : KDE Window manager
+Description  : |
+  KDE Window manager
+URL          : http://www.kde.org
+SetupOptions : -q -n %{name}-%{version}/upstream
+
+Sources:
+    - "%{name}-%{version}.tar.xz"
+
+RpmLintIgnore:
+    - devel-file-in-non-devel-package
+    - no-changelogname-tag
+    - library-without-ldconfig-postin
+    - library-without-ldconfig-postun
+
+Configure    : none
+Builder      : none
+
+PkgBR:
+    - kf5-rpm-macros
+    - extra-cmake-modules
+    - qt5-tools
+    - kconfig-devel
+    - kconfigwidgets-devel
+    - kcoreaddons-devel
+    - kcrash-devel
+    - kglobalaccel-devel
+    - ki18n-devel
+    - kinit-devel
+    - knotifications-devel
+    - kservice-devel
+    - plasma-devel
+    - kwidgetsaddons-devel
+    - kwindowsystem-devel
+    - kdoctools-devel
+    - kcmutils-devel
+    - knewstuff-devel
+    - kactivities-libs-devel
+    - kdoctools-devel
+    - libGL-devel
+    - libEGL-devel
+PkgConfigBR:
+    - Qt5Core
+    - Qt5DBus
+    - Qt5Xml
+    - Qt5Network
+    - Qt5Gui
+    - Qt5Widgets
+    - Qt5Concurrent
+    - Qt5Test
+    - Qt5Script
+    - Qt5X11Extras
+    - Qt5Quick
+    - Qt5UiTools
+    - Qt5Multimedia
+    - x11
+    - xcursor
+    - sm
+    - ice
+    - xcb-keysyms
+    - xcb-image
+    - xkbcommon
+    - epoxy
+Requires:
+    - kf5-filesystem
+
+RequiresPost:
+    - /sbin/ldconfig
+RequiresPostUn:
+    - /sbin/ldconfig
+
+Files:
+    - "%doc COMPLIANCE COPYING COPYING.DOC HACKING README"
+    - "%{_kf5_bindir}/kwin_x11"
+    - "%{_kf5_sharedir}/kwin"
+    - "%{_kf5_libdir}/libkdeinit5_kwin.so"
+    - "%{_kf5_libdir}/libkdeinit5_kwin_rules_dialog.so"
+    - "%{_kf5_libdir}/libkdecorations.so.*"
+    - "%{_kf5_libdir}/libkwinxrenderutils.so.*"
+    - "%{_kf5_libdir}/libkwineffects.so.*"
+    - "%ifarch %{arm}"
+    - "%{_kf5_libdir}/libkwinglesutils.so.*"
+    - "%endif"
+    - "%ifarch %{ix86} x86_64"
+    - "%{_kf5_libdir}/libkwinglutils.so.*"
+    - "%endif"
+    - "%{_kf5_libdir}/libkwin4_effect_builtins.so.*"
+    - "%{_kf5_plugindir}/*"
+    - "%{_kf5_qmldir}/*"
+    - "%{_kf5_libdir}/kconf_update_bin/kwin5_update_default_rules"
+    - "%{_kf5_libdir}/libexec/kwin_killer_helper"
+    - "%{_kf5_libdir}/libexec/kwin_rules_dialog"
+    - "%{_kf5_sharedir}/kwincompositing"
+    - "%{_kf5_servicesdir}/*"
+    - "%{_kf5_servicetypesdir}/*"
+    - "%{_kf5_sharedir}/knotifications5/kwin.notifyrc"
+    - "%{_kf5_sharedir}/config.kcfg/kwin.kcfg"
+    - "%{_kf5_sharedir}/icons/hicolor/*"
+    - "%{_kf5_configdir}/*.knsrc"
+
+SubPackages:
+    - Name: devel
+      Group: Development/Libraries
+      Summary: Development files for %{name}
+      Description: |
+        The %{name}-devel package contains the files necessary to develop applications
+        that use %{name}.
+      Requires:
+          - kconfig-devel
+          - kwidgetsaddons-devel
+      Files:
+          - "%{_kf5_cmakedir}/KWinDBusInterface"
+          - "%{_kf5_cmakedir}/KDecorations"
+          - "%{_kf5_dbusinterfacesdir}/*.xml"
+          - "%{_kf5_libdir}/libkdecorations.so"
+          - "%{_kf5_libdir}/libkwinxrenderutils.so"
+          - "%{_kf5_libdir}/libkwineffects.so"
+          - "%ifarch %{arm}"
+          - "%{_kf5_libdir}/libkwinglesutils.so"
+          - "%endif"
+          - "%ifarch %{ix86} x86_64"
+          - "%{_kf5_libdir}/libkwinglutils.so"
+          - "%endif"
+          - "%{_kf5_libdir}/libkwin4_effect_builtins.so"
+          - "%{_includedir}/*"
+    - Name: doc
+      Group: Documentation
+      Summary: User manual for %{name} %{name}
+      Description: |
+         User manual for %{name}.
+      Files:
+          - "%doc COMPLIANCE COPYING COPYING.DOC HACKING README"
+          - "%{_kf5_htmldir}/en/kcontrol/*"
