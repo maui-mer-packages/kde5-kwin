@@ -117,10 +117,9 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root,-)
 %doc COMPLIANCE COPYING COPYING.DOC HACKING README
-%{_kf5_bindir}/kwin_x11
+%{_kf5_bindir}/kwin_*
 %{_kf5_sharedir}/kwin
-%{_kf5_libdir}/libkdeinit5_kwin.so
-%{_kf5_libdir}/libkdeinit5_kwin_rules_dialog.so
+%{_kf5_libdir}/libkdeinit5*.so
 %{_kf5_libdir}/libkdecorations.so.*
 %{_kf5_libdir}/libkwinxrenderutils.so.*
 %{_kf5_libdir}/libkwineffects.so.*
