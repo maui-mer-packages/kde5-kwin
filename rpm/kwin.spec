@@ -121,10 +121,7 @@ rm -rf %{buildroot}
 %{_kf5_sharedir}/kwin
 %{_kf5_libdir}/libkdeinit5*.so
 %{_kf5_libdir}/libkdecorations.so.*
-%{_kf5_libdir}/libkwinxrenderutils.so.*
-%{_kf5_libdir}/libkwineffects.so.*
-%{_kf5_libdir}/libkwingl*utils.so.*
-%{_kf5_libdir}/libkwin4_effect_builtins.so.*
+%{_kf5_libdir}/libkwin*.so.*
 %{_kf5_plugindir}/*
 %{_kf5_qmldir}/*
 %{_kf5_libdir}/kconf_update_bin/kwin5_update_default_rules
@@ -146,10 +143,8 @@ rm -rf %{buildroot}
 %{_kf5_cmakedir}/KDecorations
 %{_kf5_dbusinterfacesdir}/*.xml
 %{_kf5_libdir}/libkdecorations.so
-%{_kf5_libdir}/libkwinxrenderutils.so
-%{_kf5_libdir}/libkwineffects.so
-%{_kf5_libdir}/libkwingl*utils.so
-%{_kf5_libdir}/libkwin4_effect_builtins.so
+%{_kf5_libdir}/libkwin*.so
+%exclude %{_kf5_libdir}/libkdeinit5*.so
 %{_includedir}/*
 # >> files devel
 # << files devel
