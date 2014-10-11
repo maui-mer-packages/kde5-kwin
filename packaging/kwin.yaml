@@ -7,7 +7,7 @@ Summary      : KDE Window manager
 Description  : |
   KDE Window manager
 URL          : http://www.kde.org
-SetupOptions : -q -n %{name}-%{version}/upstream
+SetupOptions : -q -n %{name}-%{version}
 
 Sources:
     - "%{name}-%{version}.tar.xz"
